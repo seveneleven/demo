@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor" InitialTargets="BuildUI">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,6 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Helpful if visual studio complains about anything -->
+    <DefaultItemExcludes>src\**;node_modules\**;package\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <!-- Automatically build the angular app, if it wasn't build before or you are running a release build -->
+  <Target Name="BuildUI" Condition="('$(Configuration)'!='Debug' Or !Exists('wwwroot\main.js')) And ('$(NoBuild)' != 'true') ">
+    <Exec WorkingDirectory="./" Command="npm config set strict-ssl false" />
+    <Exec WorkingDirectory="./" Command="npm install --no-audit" />
+    <Exec WorkingDirectory="./" Command="npm run build:prod" />
+    <Exec WorkingDirectory="./" Command="npm config set strict-ssl true" />
+  </Target>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />

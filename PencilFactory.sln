@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7237C0EF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PencilFactory.Tests", "src\Tests\PencilFactory.Tests\PencilFactory.Tests.csproj", "{E2B04E94-41F7-48AB-B142-40D399FDFEE4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PencilFactory.CustomModule", "src\PencilFactory.CustomModule\PencilFactory.CustomModule.csproj", "{{B41BE0B9-55E5-48D5-B039-D7CEF47DB042}}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

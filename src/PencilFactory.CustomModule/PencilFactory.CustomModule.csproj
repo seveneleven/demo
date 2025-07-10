@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
+    <ProjectReference Include="..\PencilFactory\PencilFactory.csproj" />
   </ItemGroup>
 
 </Project>

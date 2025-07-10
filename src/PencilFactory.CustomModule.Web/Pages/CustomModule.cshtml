@@ -1,0 +1,14 @@
+﻿@page
+@using Moryx.Asp.Integration
+@using System.ComponentModel.DataAnnotations
+@{
+    ViewData["Title"] = "CustomModule";
+    ViewData["BaseRef"] = "CustomModule/";
+
+    Layout = "_Layout";
+}
+
+@* This lines defines the text which appears in the navigation bar for your module as well as its icon and description *@
+@attribute [WebModule("CustomModule", "bolt"), Display(Name = "Custom Module", Description = "Module to demonstrate how to create custom UIs")]
+
+<p>This should be visible when you open the Module in MORYX</p>

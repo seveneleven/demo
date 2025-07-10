@@ -86,6 +86,7 @@
 
   <ItemGroup>
 	  <ProjectReference Include="..\PencilFactory.CustomModule.Endpoints\PencilFactory.CustomModule.Endpoints.csproj" />
+	  <ProjectReference Include="..\PencilFactory.CustomModule.Web\PencilFactory.CustomModule.Web.csproj" />
 	  <ProjectReference Include="..\PencilFactory.CustomModule\PencilFactory.CustomModule.csproj" />
 	  <ProjectReference Include="..\PencilFactory\PencilFactory.csproj" />
 	  <ProjectReference Include="..\PencilFactory.ControlSystem\PencilFactory.ControlSystem.csproj" />
